@@ -7,6 +7,7 @@ const $battle = document.querySelector('.battle');
 const $h3 = document.querySelector('.battle h3');
 const $leftImg = document.querySelector('.left > img');
 const $rightImg = document.querySelector('.right > img');
+const $wrap = document.querySelector('.wrap')
 
 //gender 선택 시작
 let jobKey = '';
