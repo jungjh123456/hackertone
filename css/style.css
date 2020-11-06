@@ -15,31 +15,25 @@
   text-align: center;
   position:relative;
 }
-
-
 /* render 1 */
 .gender {
   display: none;
   background-color: tomato;
 }
-
 .gender.active, .job.active {
   display: block;
 }
 .battle.active {
   display: flex;
 }
-
 .gender > button {
   width: 200px;
   height: 60px;
   margin: 20px 0;
 }
-
 main > span {
   display: block;
 }
-
 /* logo */
 .wrap2,
 .wrap {
@@ -53,7 +47,6 @@ main > span {
   left: 0;
   right: 0;
   z-index: 1;
-
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -79,12 +72,10 @@ h1 {
   0% {
   transform: translate3d(0);
   }
-
   100% {
     transform: translate3d(0, -500px, 0);
   }
 }
-
 /* 랜딩2 */
   .job {
     width: 200px;

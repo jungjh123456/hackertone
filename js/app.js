@@ -34,7 +34,20 @@ const ranDom = n => {
     }
   }
 }
+
+const randomItem = () => {
+  NewidealType = NewidealType.map((item, i, arr) => arr[numArr[i]]);
+}
+
+const matchImage = (n = 0) => {
+  $leftImg.setAttribute('src', NewidealType[n].path);
+  $rightImg.setAttribute('src', NewidealType[n+1].path);
+  console.log(NewidealType)
+}
+
+
 //gender 선택 이벤트 핸들러 등록
+
 $gender.onclick = e => {
   if(e.target.matches('.gender > next')) return;
   if(e.target.matches ('.gender > .woman')){
@@ -47,6 +60,7 @@ $gender.onclick = e => {
 //gender 선택 끝
 
 // next 버튼을 누르면 gender에 active 삭제, job에 active 추가하는 이벤트 핸들러
+
 $next.onclick = e => {
   if ( !genderChoice ) {
     alert('성별을 선택하세요!');
@@ -89,13 +103,6 @@ $start.onclick = () => {
 
  } 
 
- const randomItem = () => {
-  NewidealType = NewidealType.map((item, i, arr) => arr[numArr[i]]);
-  }
-  
-
-
-console.log($battle);
 $battle.onclick = e => {
   if (e.target === $leftImg) {
     NewidealType[0].lank = 1;
@@ -116,17 +123,8 @@ $battle.onclick = e => {
   }
 }
 
-const matchImage = (n = 0) => {
-  $leftImg.setAttribute('src', NewidealType[n].path);
-  $rightImg.setAttribute('src', NewidealType[n+1].path);
-  console.log(NewidealType)
-}
 
-
-
-
-
-
-
-
-
+// 로고 애니메이션
+$wrap.onclick = () => {
+  $wrap.classList.add('loading');
+};
